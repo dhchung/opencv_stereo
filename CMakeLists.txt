@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project(show_image)
+set(CMAKE_CXX_COMPILER g++)
+set(SOURCES src/show_stereo.cpp)
+find_package(OpenCV REQUIRED)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
